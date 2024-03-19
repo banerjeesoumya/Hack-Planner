@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hack Planner App: Edit</title>
-        <link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename = 'style.css') }}">
-    </head>
-    <body>
-        <div class = "container"></div>
-        <h1>Edit Item</h1>
-        <form class = "edit-form" action="/edit/{{ item_id }}" method="post">
-            <input type="text", name = "item" value = "{{ item }}">
-            <button type="submit">Save</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task - Hack Planner App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Task</h1>
+        <form class="edit-form" action="/edit/{{ item_id }}" method="post">
+            <input type="text" name="item" value="{{ item }}" class="input-field">
+            <button type="submit" class="edit-btn">Update</button>
         </form>
-    </body>
+    </div>
+</body>
 </html>
