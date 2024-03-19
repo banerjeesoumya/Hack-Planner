@@ -1,3 +1,4 @@
+/* Resetting default styles */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f2f2f2;
@@ -5,30 +6,42 @@ body {
     padding: 0;
 }
 
+/* Centering the heading */
 h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 20px; /* Add some space below the heading */
 }
 
+/* Container styles */
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #fff; /* Add a white background to the container */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
+/* Checklist item styles */
 .checklist-items {
     list-style-type: none;
     padding: 0;
 }
 
 .checklist-items li {
-    background-color: #fff;
+    background-color: #f9f9f9; /* Light gray background */
     border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10 px;
+    padding: 15px;
+    margin-bottom: 15px; /* Increased margin for better separation */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.checklist-items li:hover {
+    background-color: #e9e9e9; /* Darker background on hover */
 }
 
 .checklist-items li a {
@@ -37,31 +50,35 @@ h1 {
     margin-left: 10px;
 }
 
-.add-form input[type = "text"],
-.edit-form input[type = "text"] {
-    width: 70%;
+/* Form input and button styles */
+.add-form input[type="text"],
+.edit-form input[type="text"] {
+    width: calc(100% - 80px); /* Adjusted width for better alignment with button */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 10px; /* Added margin below input */
 }
 
 .add-form button,
 .edit-form button {
+    width: 80px; /* Fixed width for button */
     padding: 10px;
     background-color: #4caf50;
     border: none;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
 .add-form button:hover,
 .edit-form button:hover {
-    background-color: #4caf50;
+    background-color: #45a049; /* Darker color on hover */
 }
 
-.add-form input[type = "text"]:focus,
-.edit-form input[type = "text"]:focus {
+.add-form input[type="text"]:focus,
+.edit-form input[type="text"]:focus {
     outline: none;
     border-color: #4caf50;
 }
