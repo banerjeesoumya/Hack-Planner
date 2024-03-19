@@ -82,3 +82,5 @@ def delete(item_id):
     delete_item(item_id) 
     return redirect('/')
 
+if __name__ == "__main__":
+    app.run(debug=True)
